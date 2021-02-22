@@ -1,0 +1,40 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class="top col p30">
+  <text class="top-title mtb10">欢迎使用</text>
+  <text class="top-title">BookKeeping</text>
+</view>
+<view class="login-container row-horizontal-center p30">
+  <view class="login p30">
+    <view class="mt20">
+      <label for="tel">
+        <text class="hint">用户名/邮箱/手机号</text>
+        <input class="login-input" id="tel" type="text" />
+      </label>
+    </view>
+    <view class="mt20 mb30">
+      <label for="pwd">
+        <text class="hint">密码</text>
+        <view class="row-vertical-end">
+          <input class="login-input flex1" id="pwd" type="password" />
+          <text class="hint ml10">忘记密码？</text>
+        </view>
+      </label>
+    </view>
+    <login-button text="登录/注册"/>
+    <view class="row-v-h-center mt20">
+      <image class="icon" src="https://s3.ax1x.com/2021/02/22/yH1Mzq.png"></image>
+      <text class="wechat-login-text ml10">微信快速登录</text>
+    </view>
+  </view>
+</view>
+<view class="footer">
+  <label class="radio">
+    <checkbox-group bindchange="bindAgreementChange">
+      <checkbox value="agreement" />
+      <text class="agreement">登录表示您同意</text>
+      <text class="agreement primary-color-text">《用户协议》</text>
+      <text class="agreement">、</text>
+      <text class="agreement primary-color-text">《隐私政策》</text>
+    </checkbox-group>
+  </label>
+</view>
