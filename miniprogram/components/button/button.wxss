@@ -1,0 +1,11 @@
+/* components/button/button.wxss */
+.button {
+  height: 44px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px 0 rgba(255, 193, 83, 0.45);
+}
+.button-text {
+  color: #fff;
+}
+
+@import "../../style/base.wxss";

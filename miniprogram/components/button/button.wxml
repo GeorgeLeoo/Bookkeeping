@@ -1,0 +1,4 @@
+<!--components/button/button.wxml-->
+<view class="button primary-color-bg row-v-h-center">
+  <text class="button-text">{{text}}</text>
+</view>
