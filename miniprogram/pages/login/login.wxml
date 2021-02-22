@@ -20,21 +20,19 @@
         </view>
       </label>
     </view>
-    <login-button text="登录/注册"/>
-    <view class="row-v-h-center mt20">
+    <login-button text="登录/注册" bindtap="bindLogin" />
+    <view class="row-v-h-center mt20" bindtap="bindLogin">
       <image class="icon" src="https://s3.ax1x.com/2021/02/22/yH1Mzq.png"></image>
       <text class="wechat-login-text ml10">微信快速登录</text>
     </view>
   </view>
 </view>
 <view class="footer">
-  <label class="radio">
-    <checkbox-group bindchange="bindAgreementChange">
-      <checkbox value="agreement" />
-      <text class="agreement">登录表示您同意</text>
-      <text class="agreement primary-color-text">《用户协议》</text>
-      <text class="agreement">、</text>
-      <text class="agreement primary-color-text">《隐私政策》</text>
-    </checkbox-group>
-  </label>
+  <checkbox-group bindchange="bindAgreementChange">
+    <checkbox value="agreement" />
+    <text class="agreement">登录表示您同意</text>
+    <text class="agreement primary-color-text">《用户协议》</text>
+    <text class="agreement">、</text>
+    <text class="agreement primary-color-text">《隐私政策》</text>
+  </checkbox-group>
 </view>

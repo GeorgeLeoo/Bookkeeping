@@ -1,4 +1,6 @@
 // miniprogram/pages/login/login.js
+import toast from '../../utils/toast'
+
 Page({
 
   /**
@@ -71,9 +73,17 @@ Page({
    * @param {*} e 
    */
   bindAgreementChange(e) {
-    console.log(e);
     this.setData({
       isAgree: e.detail.value.length === 1
     })
+  },
+  /**
+   * 点击 登录/注册 或者  微信快速登录
+   */
+  bindLogin() {
+    if (!this.isAgree) {
+      toast('请先勾选底部同意协议选项')
+      return
+    }
   },
 })
