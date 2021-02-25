@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/setting/setting",
     "pages/mine/mine",
     "pages/login/login",
     "pages/detail/detail",
@@ -23,9 +24,9 @@
   "window": {
     "backgroundColor": "#F9DA56",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "BookKeeping",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F9DA56"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",

@@ -30,7 +30,7 @@
 </view>
 <view class="content">
   <view class="menu row-j-sb card">
-    <view wx:for="{{menuList}}" wx:key="text" class="menu-item">
+    <view wx:for="{{menuList}}" wx:key="text" class="menu-item" data-item="{{item}}" bindtap="bindMenuTab">
       <image class="menu-icon" src="{{item.icon}}"></image>
       <text class="menu-text">{{item.text}}</text>
     </view>

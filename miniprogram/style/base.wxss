@@ -98,3 +98,8 @@
   font-size: 16px;
   color: #464F5C;
 }
+
+.more_arrow {
+  width: 16px;
+  height: 16px;
+}

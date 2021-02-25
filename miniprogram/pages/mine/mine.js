@@ -13,23 +13,28 @@ Page({
     menuList: [
       {
         icon: '../../assets/me_item_guide_msg_ic.png',
-        text: '消息'
+        text: '消息',
+        url: '/pages/setting/setting'
       },
       {
         icon: '../../assets/me_item_guide_badge_ic.png',
-        text: '我的徽章'
+        text: '我的徽章',
+        url: '/pages/setting/setting'
       },
       {
         icon: '../../assets/me_item_guide_reward_ic.png',
-        text: '我的积分'
+        text: '我的积分',
+        url: '/pages/setting/setting'
       },
       {
         icon: '../../assets/me_item_guide_recommend_ic.png',
-        text: '邀请好友'
+        text: '邀请好友',
+        url: '/pages/setting/setting'
       },
       {
         icon: '../../assets/me_item_guide_setting_ic.png',
-        text: '设置'
+        text: '设置',
+        url: '/pages/setting/setting'
       },
     ]
   },
@@ -91,5 +96,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  bindMenuTab({currentTarget}) {
+    wx.navigateTo({
+      url: currentTarget.dataset.item.url,
+    })
   }
 })

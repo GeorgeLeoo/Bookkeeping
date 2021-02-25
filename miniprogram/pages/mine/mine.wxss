@@ -73,9 +73,6 @@
   height: 16px;
 }
 
-.card-body {}
-
-.menu {}
 .menu-item {
   display: flex;
   flex-direction: column;
