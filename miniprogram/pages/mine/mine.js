@@ -5,14 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {},
+    isPunchCard: false,
+    punchConsecutiveDays: 2,
+    totalDays: 293,
+    billTotalCount: 215,
+    menuList: [
+      {
+        icon: '../../assets/me_item_guide_msg_ic.png',
+        text: '消息'
+      },
+      {
+        icon: '../../assets/me_item_guide_badge_ic.png',
+        text: '我的徽章'
+      },
+      {
+        icon: '../../assets/me_item_guide_reward_ic.png',
+        text: '我的积分'
+      },
+      {
+        icon: '../../assets/me_item_guide_recommend_ic.png',
+        text: '邀请好友'
+      },
+      {
+        icon: '../../assets/me_item_guide_setting_ic.png',
+        text: '设置'
+      },
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const userInfo = wx.getStorageSync('userInfo')
+    this.setData({
+      userInfo
+    })
   },
 
   /**

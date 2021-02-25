@@ -8,6 +8,9 @@
 .flex {
   display: flex;
 }
+.flex1 {
+  flex: 1;
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -36,6 +39,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.row-j-sb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .flex1 {
   flex: 1;

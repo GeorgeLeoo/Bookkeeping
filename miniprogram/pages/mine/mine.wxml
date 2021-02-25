@@ -1,2 +1,75 @@
-<!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<view class="head primary-color-bg ">
+  <view class="row-j-sb ">
+    <view class="row-vertical-center">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view>
+    <view wx:if="{{!isPunchCard}}">
+      <image class="punch-card-icon" src="../../assets/bill_total_days_icon.png"></image>
+    </view>
+    <view wx:else class="punch-card row-vertical-center">
+      <text class="punch-card-text">已打卡</text>
+    </view>
+  </view>
+  </view>
+  <view class="stat row-j-sb ">
+    <view class="stat-item">
+      <text class="stat-count">{{punchConsecutiveDays}}</text>
+      <text class="stat-text">已连续打卡</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-count">{{totalDays}}</text>
+      <text class="stat-text">记账总天数</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-count">{{billTotalCount}}</text>
+      <text class="stat-text">记账总笔数</text>
+    </view>
+  </view>
+</view>
+<view class="content">
+  <view class="menu row-j-sb card">
+    <view wx:for="{{menuList}}" wx:key="text" class="menu-item">
+      <image class="menu-icon" src="{{item.icon}}"></image>
+      <text class="menu-text">{{item.text}}</text>
+    </view>
+  </view>
+  <view class="card bill">
+    <view class="card-title row-j-sb">
+      <text class="card-title-text">账单</text>
+      <view class="row-vertical-center">
+        <image class="card-title-icon" src="../../assets/more_arrow.png"></image>
+      </view>
+    </view>
+    <view class="card-body row mt20">
+      <view class="bill-left row-vertical-center ">
+        <text class="bill-left-month">02月</text>
+      </view>
+      <view class="line"></view>
+      <view class="bill-right row-j-sb flex1">
+        <view class="bill-right-item col">
+          <text class="bill-right-item-text">收入</text>
+          <text class="bill-right-item-money">0.00</text>
+        </view>
+        <view class="bill-right-item col">
+          <text class="bill-right-item-text">支出</text>
+          <text class="bill-right-item-money">0.00</text>
+        </view>
+        <view class="bill-right-item col">
+          <text class="bill-right-item-text">结余</text>
+          <text class="bill-right-item-money">0.00</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="card bill">
+    <view class="card-title row-j-sb">
+      <text class="card-title-text">02月总预算</text>
+      <view class="row-vertical-center">
+        <text class="card-sub-title-text">查看全部</text>
+        <image class="card-title-icon" src="../../assets/more_arrow.png"></image>
+      </view>
+    </view>
+  </view> -->
+</view>
