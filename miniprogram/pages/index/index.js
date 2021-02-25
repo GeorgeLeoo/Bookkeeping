@@ -36,6 +36,12 @@ Page({
     })
   },
 
+  onShow: function() {
+    if (wx.canIUse('hideHomeButton')) {
+      wx.hideHomeButton()
+    }
+  },
+
   onGetUserInfo: function(e) {
     if (!this.data.logged && e.detail.userInfo) {
       this.setData({

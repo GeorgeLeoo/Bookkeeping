@@ -8,4 +8,6 @@ const toast = (title, icon = 'none') => {
   })
 }
 
+export const hideToast = () => wx.hideToast()
+
 export default toast
