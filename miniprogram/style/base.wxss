@@ -1,9 +1,9 @@
 .primary-color-text {
-  color: #FFC153;
+  color: #F9DA56;
 }
 
 .primary-color-bg {
-  background-color: #FFC153;
+  background-color: #F9DA56;
 }
 .flex {
   display: flex;

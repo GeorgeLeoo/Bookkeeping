@@ -1,6 +1,11 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/detail/detail",
+    "pages/chart/chart",
+    "pages/social/social",
+    "pages/mine/mine",
+    "pages/bill/bill",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -23,5 +28,34 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "tabBar": {
+    "selectedColor": "#333",
+    "list": [
+      {
+        "pagePath": "pages/detail/detail",
+        "text": "明细",
+        "iconPath": "assets/bottom_detail_normal.png",
+        "selectedIconPath": "assets/bottom_detail_pressed.png"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "text": "图表",
+        "iconPath": "assets/bottom_chart_normal.png",
+        "selectedIconPath": "assets/bottom_chart_pressed.png"
+      },
+      {
+        "pagePath": "pages/social/social",
+        "text": "社区",
+        "iconPath": "assets/bottom_sns_normal.png",
+        "selectedIconPath": "assets/bottom_sns_pressed.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/bottom_me_normal.png",
+        "selectedIconPath": "assets/bottom_me_pressed.png"
+      }
+    ]
+  }
 }

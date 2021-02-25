@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "BookKeeping-登录",
-  "navigationBarBackgroundColor": "#FFC153",
+  "navigationBarBackgroundColor": "#F9DA56",
   "navigationBarTextStyle": "white",
   "usingComponents": {
     "login-button": "/components/button/button"
