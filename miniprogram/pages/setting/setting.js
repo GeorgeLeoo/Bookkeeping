@@ -10,7 +10,8 @@ Page({
         {
           icon: '../../assets/me_category.png',
           text: '类别设置',
-          type: 'classSetting'
+          type: 'classSetting',
+          url: '/pages/categorySetting/categorySetting'
         },
         {
           icon: '../../assets/me_export.png',
@@ -102,5 +103,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  bindSettingItemTab({currentTarget}) {
+    wx.navigateTo({
+      url: currentTarget.dataset.url,
+    })
   }
 })

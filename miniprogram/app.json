@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/setting/setting",
     "pages/mine/mine",
-    "pages/login/login",
     "pages/detail/detail",
     "pages/chart/chart",
     "pages/social/social",
@@ -19,7 +19,8 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
-    "pages/im/room/room"
+    "pages/im/room/room",
+    "pages/categorySetting/categorySetting"
   ],
   "window": {
     "backgroundColor": "#F9DA56",

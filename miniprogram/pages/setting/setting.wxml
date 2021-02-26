@@ -1,5 +1,5 @@
 <view class="setting" wx:for="{{settings}}" wx:for-item="setting" wx:key="index">
-  <view class="setting-item row" wx:for="{{setting}}" wx:key="text">
+  <view class="setting-item row" wx:for="{{setting}}" wx:key="text" data-url="{{item.url}}" bindtap="bindSettingItemTab">
     <view class="row-vertical-center">
       <image class="setting-icon" src="{{item.icon}}"></image>
     </view>
