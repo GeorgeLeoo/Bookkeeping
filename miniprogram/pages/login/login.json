@@ -3,6 +3,7 @@
   "navigationBarBackgroundColor": "#F9DA56",
   "navigationBarTextStyle": "white",
   "usingComponents": {
-    "login-button": "/components/button/button"
+    "login-button": "/components/button/button",
+    "bottom": "/components/bottom/bottom"
   }
 }

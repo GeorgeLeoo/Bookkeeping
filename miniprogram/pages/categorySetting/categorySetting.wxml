@@ -1,2 +1,47 @@
-<!--miniprogram/pages/categorySetting/categorySetting.wxml-->
-<text>miniprogram/pages/categorySetting/categorySetting.wxml</text>
+<tabs class="tabs" data="{{tabList}}" margin="0 40px" bindTabChange="bindTabChange"></tabs>
+<view hidden="{{!(index === 0)}}" class="list-wrapper">
+  <view class="list">
+    <view wx:for="{{outAddList}}" wx:key="index"
+      class="item row-vertical-center {{ index === addList.length - 1 ? '' : 'line' }}">
+      <image class="del-icon" src="{{imgHost}}/assets/ic_delete_photo.png"></image>
+      <image class="icon" src="{{imgHost}}{{item.icon}}"></image>
+      <text class="name">{{item.name}}</text>
+      <text wx:if="{{item.type === 'custom'}}" class="custom">（自定义）</text>
+    </view>
+  </view>
+  <view class="list">
+    <view wx:for="{{outDelList}}" wx:key="index"
+      class="item row-vertical-center {{ index === delList.length - 1 ? '' : 'line' }}">
+      <image class="del-icon" src="{{imgHost}}/assets/ic_calendar_add_btn.png"></image>
+      <image class="icon" src="{{imgHost}}{{item.icon}}"></image>
+      <text class="name">{{item.name}}</text>
+      <text wx:if="{{item.type === 'custom'}}" class="custom">（自定义）</text>
+    </view>
+  </view>
+</view>
+<view hidden="{{!(index === 1)}}" class="list-wrapper">
+  <view class="list">
+    <view wx:for="{{inAddList}}" wx:key="index"
+      class="item row-vertical-center {{ index === addList.length - 1 ? '' : 'line' }}">
+      <image class="del-icon" src="{{imgHost}}/assets/ic_delete_photo.png"></image>
+      <image class="icon" src="{{imgHost}}{{item.icon}}"></image>
+      <text class="name">{{item.name}}</text>
+      <text wx:if="{{item.type === 'custom'}}" class="custom">（自定义）</text>
+    </view>
+  </view>
+  <view class="list">
+    <view wx:for="{{inDelList}}" wx:key="index"
+      class="item row-vertical-center {{ index === delList.length - 1 ? '' : 'line' }}">
+      <image class="del-icon" src="{{imgHost}}/assets/ic_calendar_add_btn.png"></image>
+      <image class="icon" src="{{imgHost}}{{item.icon}}"></image>
+      <text class="name">{{item.name}}</text>
+      <text wx:if="{{item.type === 'custom'}}" class="custom">（自定义）</text>
+    </view>
+  </view>
+</view>
+<bottom>
+  <view class="bottom row-v-h-center" bindtap="bindToAddCategory">
+    <image class="bottom-add-icon" src="{{imgHost}}/assets/sk_auto_tally_add_icon.png"></image>
+    <text class="bottom-add-text">添加类别</text>
+  </view>
+</bottom>

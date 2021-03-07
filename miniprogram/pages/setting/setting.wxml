@@ -1,11 +1,11 @@
 <view class="setting" wx:for="{{settings}}" wx:for-item="setting" wx:key="index">
   <view class="setting-item row" wx:for="{{setting}}" wx:key="text" data-url="{{item.url}}" bindtap="bindSettingItemTab">
     <view class="row-vertical-center">
-      <image class="setting-icon" src="{{item.icon}}"></image>
+      <image class="setting-icon" src="{{imgHost}}{{item.icon}}"></image>
     </view>
     <view class="row-vertical-center flex1 row-j-sb setting-right">
       <text>{{item.text}}</text>
-      <image class="more_arrow" src="../../assets/more_arrow.png"></image>
+      <image class="more_arrow" src="{{imgHost}}/assets/more_arrow.png"></image>
     </view>
   </view>
 </view>

@@ -29,12 +29,14 @@
     </button>
   </view>
 </view>
-<view class="footer">
-  <checkbox-group bindchange="bindAgreementChange">
-    <checkbox value="agreement" />
-    <text class="agreement">登录表示您同意</text>
-    <text class="agreement primary-color-text">《用户协议》</text>
-    <text class="agreement">、</text>
-    <text class="agreement primary-color-text">《隐私政策》</text>
-  </checkbox-group>
-</view>
+<bottom background="#f5f5f5">
+  <view class="footer">
+    <checkbox-group bindchange="bindAgreementChange">
+      <checkbox value="agreement" />
+      <text class="agreement">登录表示您同意</text>
+      <text class="agreement primary-color-text">《用户协议》</text>
+      <text class="agreement">、</text>
+      <text class="agreement primary-color-text">《隐私政策》</text>
+    </checkbox-group>
+  </view>
+</bottom>

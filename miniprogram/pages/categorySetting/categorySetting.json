@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "类别设置",
+  "usingComponents": {
+    "bottom": "/components/bottom/bottom",
+    "tabs": "/components/tabs/tabs"
+  }
 }

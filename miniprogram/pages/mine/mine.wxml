@@ -6,7 +6,7 @@
   </view>
   <view>
     <view wx:if="{{!isPunchCard}}">
-      <image class="punch-card-icon" src="../../assets/bill_total_days_icon.png"></image>
+      <image class="punch-card-icon" src="{{imgHost}}/assets/bill_total_days_icon.png"></image>
     </view>
     <view wx:else class="punch-card row-vertical-center">
       <text class="punch-card-text">已打卡</text>
@@ -31,7 +31,7 @@
 <view class="content">
   <view class="menu row-j-sb card">
     <view wx:for="{{menuList}}" wx:key="text" class="menu-item" data-item="{{item}}" bindtap="bindMenuTab">
-      <image class="menu-icon" src="{{item.icon}}"></image>
+      <image class="menu-icon" src="{{imgHost}}{{item.icon}}"></image>
       <text class="menu-text">{{item.text}}</text>
     </view>
   </view>

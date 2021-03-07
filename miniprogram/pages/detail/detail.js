@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  bindTabAdd() {
+    wx.navigateTo({
+      url: '/pages/add/add',
+    })
   }
 })

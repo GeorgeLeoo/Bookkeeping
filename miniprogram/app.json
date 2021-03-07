@@ -1,12 +1,15 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/add/add",
+    "pages/bill/bill",
+    "pages/categorySetting/categorySetting",
+    "pages/addCategory/addCategory",
     "pages/setting/setting",
     "pages/mine/mine",
     "pages/detail/detail",
     "pages/chart/chart",
     "pages/social/social",
-    "pages/bill/bill",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -19,8 +22,7 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
-    "pages/im/room/room",
-    "pages/categorySetting/categorySetting"
+    "pages/im/room/room"
   ],
   "window": {
     "backgroundColor": "#F9DA56",

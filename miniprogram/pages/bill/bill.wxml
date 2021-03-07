@@ -1,2 +1,4 @@
 <!--miniprogram/pages/bill/bill.wxml-->
-<text>miniprogram/pages/bill/bill.wxml</text>
+<view>
+  <float-button/>
+</view>
