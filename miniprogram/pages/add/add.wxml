@@ -1,0 +1,26 @@
+<view class="nav row-j-sb primary-color-bg">
+  <view></view>
+  <view class="nav-list">
+    <text class="nav-list-item {{0 === navIndex ? 'selected-nav' : 'normal-nav'}}" data-index="0" bindtap="bindTabNav">支出</text>
+    <text class="nav-list-item {{1 === navIndex ? 'selected-nav' : 'normal-nav'}}" data-index="1" bindtap="bindTabNav">收入</text>
+  </view>
+  <view></view>
+</view>
+<view class="container">
+  <view hidden="{{!(navIndex === 0)}}" class="list">
+    <view class="list-item" wx:for="{{outAddList}}" wx:key="index" data-index="{{index}}" bindtap="bindtapIcon">
+      <image class="icon" src="{{imgHost}}{{item.icon}}"></image>
+      <!-- <image lazy-load="{{true}}" hidden="{{!(rowIndex === index && colIndex === iconIndex) }}" class="icon p10"
+          src="{{imgHost}}{{icon.selected}}" alt="" data-rowIndex="{{index}}" data-colIndex="{{iconIndex}}"
+          bindtap="bindIconTab" /> -->
+      <text class="name">{{item.name}}</text>
+    </view>
+  </view>
+  <view hidden="{{!(navIndex === 1)}}" class="list">
+    <view class="list-item" wx:for="{{inAddList}}" wx:key="index" data-index="{{index}}" bindtap="bindtapIcon">
+      <image class="icon" src="{{imgHost}}{{item.icon}}"></image>
+      <text class="name">{{item.name}}</text>
+    </view>
+  </view>
+</view>
+<keyboard bindok="bindKeyboardOk"/>

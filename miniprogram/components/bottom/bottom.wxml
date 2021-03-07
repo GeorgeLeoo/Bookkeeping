@@ -1,0 +1,3 @@
+<view class="bottom" style="background: {{background}}" >
+  <slot></slot>
+</view>

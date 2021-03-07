@@ -1,0 +1,28 @@
+<view class="header row-vertical-center">
+  <image class="icon" src="{{imgHost}}{{selectedIcon}}"></image>
+  <input model:value="{{category}}" class="flex1 ml10" type="text" placeholder="请输入类别名称（不超过4个汉字）" />
+  <image wx:if="{{category}}" class="del-icon mlr4px" src="../../assets/sns_search_text_del_ic.png"
+    bindtap="bindDelInput"></image>
+</view>
+<view class="category-container">
+  <view class="category-container-item mtb20" wx:for="{{categoryList}}" wx:key="index">
+    <view class="row-horizontal-center">
+      <text class="f14 bold">{{item.categoryName}}</text>
+    </view>
+    <view class="row-j-sb wrap">
+      <view wx:for="{{item.icons}}" wx:for-index="iconIndex" wx:for-item="icon" wx:key="iconIndex">
+        <image lazy-load="{{true}}" hidden="{{!(rowIndex === index && colIndex === iconIndex) }}" class="icon p10"
+          src="{{imgHost}}{{icon.selected}}" alt="" data-rowIndex="{{index}}" data-colIndex="{{iconIndex}}"
+          bindtap="bindIconTab" />
+        <image lazy-load="{{true}}" hidden="{{rowIndex === index && colIndex === iconIndex }}" class="icon p10"
+          src="{{imgHost}}{{icon.normal}}" alt="" data-rowIndex="{{index}}" data-colIndex="{{iconIndex}}"
+          bindtap="bindIconTab" />
+      </view>
+    </view>
+  </view>
+</view>
+<bottom>
+  <view class="row-v-h-center footer">
+    <text class="footer-text">完成</text>
+  </view>
+</bottom>

@@ -1,0 +1,37 @@
+<bottom background="#f5f5f5">
+  <view class="mask"></view>
+  <view class="remark row-j-sb keyboard-line-t keyboard-line-b" style="bottom:{{bottom}}px">
+    <view class="row-vertical-center">
+      <image class="remark-icon" src="{{imgHost}}/assets/sk_add_account_remark_icon.png"></image>
+      <text>备注：</text>
+      <input type="text" placeholder="点击写备注..." adjust-position="{{false}}" bindfocus='bindRemarkFocus' bindblur="bindRemarkBlur"/>
+    </view>
+    <view>
+      <text>{{formula}}</text>
+    </view>
+  </view>
+  <view class="keyboard">
+    <view wx:for="{{list}}" wx:key="index"
+      class="keyboard-item line {{item.type === 'ok' ? 'ok-bg' : 'bg'}} {{index < 4 ? 'keyboard-line-t': ''}} {{(index+1) % 4 ? 'keyboard-line-r keyboard-line-b' : 'keyboard-line-b'}} {{index === list.length - 1 ? 'primary-color-bg' : ''}}"
+      data-item="{{item}}" bindtap="bindKeyboardTap">
+      <text wx:if="{{item.type === 'number'}}" class="keyboard-item-text">{{item.value}}</text>
+      <text wx:if="{{item.type === 'dot'}}" class="keyboard-item-text">{{item.value}}</text>
+      <text wx:if="{{item.type === 'operator'}}" class="keyboard-item-text">{{item.value}}</text>
+      <view wx:if="{{item.type === 'ok'}}">
+        <text class="keyboard-item-text-ok">完成</text>
+      </view>
+      <view wx:if="{{item.type === 'del'}}">
+        <image class="del-icon" src="{{imgHost}}/assets/tally_keyboard_del.png"></image>
+      </view>
+      <view wx:if="{{item.type === 'date'}}">
+        <picker mode="date" value="{{date}}" start="2015-09-01" bindchange="bindDateChange">
+          <view wx:if="{{date === today}}" class="row-v-h-center">
+            <image class="calendar-icon" src="{{imgHost}}/assets/sk_add_account_calendar_icon.png"></image>
+            <text class="calendar-text">今天</text>
+          </view>
+          <text wx:else class="date">{{date}}</text>
+        </picker>
+      </view>
+    </view>
+  </view>
+</bottom>

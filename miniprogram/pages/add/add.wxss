@@ -1,0 +1,53 @@
+/* miniprogram/pages/add/add.wxss */
+@import "../../style/base.wxss";
+
+page {
+  background-color: #fff;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-list {
+  padding-bottom: 10px;
+  position: relative;
+  top: -2px;
+}
+.nav-list-item {
+  padding: 10px;
+  margin: 0 10px;
+  border-bottom: 2px solid #F9DA56;
+}
+
+.selected-nav {
+  border-bottom-color: #333;
+}
+.normal-nav {
+  border-bottom-color: #F9DA56;
+}
+.list {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.list-item {
+  flex: 0 0 auto;
+  width: 25%;
+  text-align: center;
+  color: #797979;
+  padding: 40rpx 0;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}

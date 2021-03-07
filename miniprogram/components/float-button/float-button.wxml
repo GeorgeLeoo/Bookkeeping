@@ -1,0 +1,2 @@
+<!--components/float-button/float-button.wxml-->
+<image class="add-icon" src="{{imgHost}}/assets/ic_calendar_add_btn.png"></image>

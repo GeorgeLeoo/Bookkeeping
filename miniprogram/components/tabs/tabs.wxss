@@ -1,0 +1,27 @@
+/* components/tab-bar/tab-bar.wxss */
+.tabs-wrapper {
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+}
+.tabs {
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+.tab-item {
+  line-height: 32px;
+  color: #333;
+  transition: all 0.1s;
+}
+.selected {
+  background-color: #333!important;
+}
+.border-left-radius {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.border-right-radius {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+@import "../../style/base.wxss";

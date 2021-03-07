@@ -1,0 +1,8 @@
+/* components/float-button/float-button.wxss */
+.add-icon {
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+}

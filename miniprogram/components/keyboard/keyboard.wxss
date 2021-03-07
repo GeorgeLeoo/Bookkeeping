@@ -1,0 +1,107 @@
+/* components/keyboard/keyboard.wxss */
+@import "../../style/base.wxss";
+
+.remark {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  bottom: 232;
+  box-sizing: border-box;
+  background: #f5f5f5;
+}
+
+.remark-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.keyboard {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+}
+.keyboard-item {
+  flex: 0 0 auto;
+  width: 25%;
+  text-align: center;
+  color: #797979;
+  /* padding: 40rpx 0; */
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.bg:active {
+  background-color: #d8d8d8;
+}
+
+.ok-bg:active {
+  background-color: #e9c835;
+}
+
+.keyboard-item-text {
+  font-size: 22px;
+  color: #333;
+}
+
+.keyboard-item-text-ok {
+  font-size: 18px;
+  color: #333;
+}
+
+.keyboard-item-text-date {
+  font-size: 16px;
+  color: #333;
+}
+
+.calendar-text {
+  font-size: 16px;
+  color: #333;
+  margin-left: 4px;
+}
+
+.del-icon {
+  width: 36px;
+  height: 30px;
+}
+
+.calendar-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.keyboard-line-r {
+  border-right: 1px solid #dfdfdf;
+}
+
+.keyboard-line-t {
+  border-top: 1px solid #dfdfdf;
+}
+
+.keyboard-line-b {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.date {
+  color: #333;
+  font-size: 14px;
+}
+
+.mask {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc(100vh - 74px);
+  background: rgba(0, 0, 0, 0.4);
+  margin-bottom: 42px;
+  z-index: -999999;
+}

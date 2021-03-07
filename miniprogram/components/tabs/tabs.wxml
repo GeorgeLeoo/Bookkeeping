@@ -1,0 +1,8 @@
+<!--components/tab-bar/tab-bar.wxml-->
+<view class="tabs-wrapper primary-color-bg">
+  <view class="tabs row-horizontal-center" style="margin: {{margin}}">
+    <view wx:for="{{data}}" wx:key="index" class="tab-item flex1 row-horizontal-center {{ selectedIndex === index ? 'selected primary-color-text' : ''}} {{ selectedIndex === 0 ? 'border-left-radius' : '' }} {{ selectedIndex === data.length - 1 ? 'border-right-radius' : '' }}" data-index="{{index}}" bindtap="bindTabChange">
+      <text>{{item.label}}</text>
+    </view>
+  </view>
+</view>
