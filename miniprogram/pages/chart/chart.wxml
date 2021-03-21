@@ -1,2 +1,16 @@
-<!--miniprogram/pages/chart/chart.wxml-->
-<text>miniprogram/pages/chart/chart.wxml</text>
+<view class="header row-v-h-center primary-color-bg f18">
+  <text>{{ HEADER_MAP[headerType] }}</text>
+  <image class="pull-down-icon" src="{{imgHost}}/assets/pull_down_selector_normal.png"></image>
+</view>
+<tabs class="tabs" data="{{tabList}}" margin="0 40px" bindTabChange="bindTabChange"></tabs>
+<view hidden class="drop-down-wrapper">
+  <view class="drop-down">
+    <view wx:for="{{headerList}}" wx:key="item.type" class="drop-down-item row-vertical-center">
+      <image class="pull-down-icon" src="{{imgHost}}{{item.icon}}"></image>
+      <view class="flex1 row-j-sb ml10 p10 {{index === 0 ? 'line' : ''}}">
+        <text>{{item.label}}</text>
+        <image class="select-icon" src="{{imgHost}}/assets/sc_audio_tick_ic.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

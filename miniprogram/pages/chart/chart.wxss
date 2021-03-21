@@ -1,1 +1,29 @@
 /* miniprogram/pages/chart/chart.wxss */
+@import "../../style/base.wxss";
+.header {
+  font-weight: bold;
+}
+.pull-down-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+}
+
+.select-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.drop-down-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 74px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.drop-down {
+  background-color: #fff;
+}
+.drop-down-item {
+}

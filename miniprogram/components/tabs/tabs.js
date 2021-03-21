@@ -20,11 +20,11 @@ Component({
    */
   methods: {
     bindTabChange(e) {
-      const selectedIndex = e.currentTarget.dataset.index
+      const selectedIndex = Number(e.currentTarget.dataset.index)
       this.setData({
         selectedIndex
       })
-      this.triggerEvent('TabChange', { index: selectedIndex }, {ok: 1})
+      this.triggerEvent('TabChange', { index: selectedIndex })
     }
   }
 })

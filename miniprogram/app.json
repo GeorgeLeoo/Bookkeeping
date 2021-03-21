@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/chart/chart",
     "pages/login/login",
     "pages/add/add",
     "pages/bill/bill",
@@ -8,7 +9,6 @@
     "pages/setting/setting",
     "pages/mine/mine",
     "pages/detail/detail",
-    "pages/chart/chart",
     "pages/social/social",
     "pages/index/index",
     "pages/userConsole/userConsole",
@@ -34,6 +34,7 @@
   "sitemapLocation": "sitemap.json",
   "style": "v2",
   "tabBar": {
+    "custom": true,
     "selectedColor": "#333",
     "list": [
       {

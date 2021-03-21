@@ -1,4 +1,3 @@
 <!--miniprogram/pages/detail/detail.wxml-->
 <view>
-  <float-button bindtap="bindTabAdd"/>
 </view>

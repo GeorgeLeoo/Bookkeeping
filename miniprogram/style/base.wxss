@@ -122,6 +122,11 @@
   color: #464F5C;
 }
 
+.f18 {
+  font-size: 18px;
+  color: #333333;
+}
+
 .more_arrow {
   width: 16px;
   height: 16px;
