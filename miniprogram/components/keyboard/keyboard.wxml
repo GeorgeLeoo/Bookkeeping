@@ -1,19 +1,27 @@
 <bottom background="#f5f5f5">
-  <view class="mask"></view>
+  <view wx:if="{{remarkFocus}}" class="mask"></view>
   <view class="remark row-j-sb keyboard-line-t keyboard-line-b" style="bottom:{{bottom}}px">
-    <view class="row-vertical-center">
-      <image class="remark-icon" src="{{imgHost}}/assets/sk_add_account_remark_icon.png"></image>
-      <text>备注：</text>
-      <input type="text" placeholder="点击写备注..." adjust-position="{{false}}" bindfocus='bindRemarkFocus' bindblur="bindRemarkBlur"/>
+    <view class="row-vertical-center flex1">
+      <view class="row-vertical-center nowrap"> 
+        <image class="remark-icon" src="{{imgHost}}/assets/sk_add_account_remark_icon.png"></image>
+        <view class="remark-hint">
+          <text>备注：</text>
+        </view>
+      </view>
+      <input class="flex1" type="text" model:value="{{remark}}" placeholder="点击写备注..." adjust-position="{{false}}" bindfocus='bindRemarkFocus' bindblur="bindRemarkBlur"/>
     </view>
     <view>
-      <text>{{formula}}</text>
+      <text class="formula">{{formula}}</text>
     </view>
   </view>
   <view class="keyboard">
-    <view wx:for="{{list}}" wx:key="index"
+    <view
+      wx:for="{{list}}"
+      wx:key="index"
       class="keyboard-item line {{item.type === 'ok' ? 'ok-bg' : 'bg'}} {{index < 4 ? 'keyboard-line-t': ''}} {{(index+1) % 4 ? 'keyboard-line-r keyboard-line-b' : 'keyboard-line-b'}} {{index === list.length - 1 ? 'primary-color-bg' : ''}}"
-      data-item="{{item}}" bindtap="bindKeyboardTap">
+      data-item="{{item}}"
+      bindtap="bindKeyboardTap"
+    >
       <text wx:if="{{item.type === 'number'}}" class="keyboard-item-text">{{item.value}}</text>
       <text wx:if="{{item.type === 'dot'}}" class="keyboard-item-text">{{item.value}}</text>
       <text wx:if="{{item.type === 'operator'}}" class="keyboard-item-text">{{item.value}}</text>

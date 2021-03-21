@@ -105,3 +105,15 @@
   margin-bottom: 42px;
   z-index: -999999;
 }
+
+.remark-hint {
+  /* width: 80px; */
+}
+
+.formula {
+  font-size: 22px;
+}
+
+.w70 {
+  width: 80px!important;
+}

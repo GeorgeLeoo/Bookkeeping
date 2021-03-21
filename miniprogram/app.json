@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/add/add",
     "pages/login/login",
+    "pages/add/add",
     "pages/bill/bill",
     "pages/categorySetting/categorySetting",
     "pages/addCategory/addCategory",

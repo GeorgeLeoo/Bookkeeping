@@ -10,3 +10,5 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+# 图片服务器
+本项目需要使用图片服务器，首先确保你的机器有node，其次 `npm i -g sever`，最后启动打开终端进入本项目的oss目录，运行命令`serve`即可

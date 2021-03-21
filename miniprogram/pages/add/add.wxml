@@ -9,18 +9,17 @@
 <view class="container">
   <view hidden="{{!(navIndex === 0)}}" class="list">
     <view class="list-item" wx:for="{{outAddList}}" wx:key="index" data-index="{{index}}" bindtap="bindtapIcon">
-      <image class="icon" src="{{imgHost}}{{item.icon}}"></image>
-      <!-- <image lazy-load="{{true}}" hidden="{{!(rowIndex === index && colIndex === iconIndex) }}" class="icon p10"
-          src="{{imgHost}}{{icon.selected}}" alt="" data-rowIndex="{{index}}" data-colIndex="{{iconIndex}}"
-          bindtap="bindIconTab" /> -->
+      <image lazy-load="{{true}}" class="icon p10" hidden="{{!(iconIndex === index) }}" src="{{imgHost}}{{item.icon.selected}}" alt="" />
+      <image lazy-load="{{true}}" class="icon p10" hidden="{{iconIndex === index }}" src="{{imgHost}}{{item.icon.normal}}" alt="" />
       <text class="name">{{item.name}}</text>
     </view>
   </view>
   <view hidden="{{!(navIndex === 1)}}" class="list">
     <view class="list-item" wx:for="{{inAddList}}" wx:key="index" data-index="{{index}}" bindtap="bindtapIcon">
-      <image class="icon" src="{{imgHost}}{{item.icon}}"></image>
+      <image lazy-load="{{true}}" class="icon p10" hidden="{{!(iconIndex === index) }}" src="{{imgHost}}{{item.icon.selected}}" alt="" />
+      <image lazy-load="{{true}}" class="icon p10" hidden="{{iconIndex === index }}" src="{{imgHost}}{{item.icon.normal}}" alt="" />
       <text class="name">{{item.name}}</text>
     </view>
   </view>
 </view>
-<keyboard bindok="bindKeyboardOk"/>
+<keyboard wx:if="{{showKeyboard}}" bindok="bindKeyboardOk"/>
